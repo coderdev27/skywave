@@ -12,7 +12,7 @@ const Explore = () => {
 
   let allNft = [...newBayc, ...newGhost, ...newMayc, ...newAzuki]
 
-  console.log(allNft)
+  // console.log(allNft)
   return (
     // explore nft collection
     <div className='padding'>

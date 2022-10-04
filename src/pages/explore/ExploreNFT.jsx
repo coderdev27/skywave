@@ -3,16 +3,16 @@ import Header from '../../components/header/Header'
 import "./explore.scss"
 import {bayc, mayc, ghost} from "../../data/nftData"
 import NftCard from '../../components/nftCard/NftCard'
-import { ModalContext } from '../../hooks/ModalContext'
-import { useState, useContext } from 'react'
+// import { ModalContext } from '../../hooks/ModalContext'
+// import { useState, useContext } from 'react'
 
 
 
 const ExploreNFT = () => {
-  const {showModal,
-    setShowModal,
-    selectedNft,
-    handleShowModal, } = useContext(ModalContext)
+  // const {showModal,
+  //   setShowModal,
+  //   selectedNft,
+  //   handleShowModal, } = useContext(ModalContext)
 
   let all = [...bayc, ...mayc, ...ghost]
 

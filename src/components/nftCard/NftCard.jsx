@@ -7,10 +7,10 @@ import { ModalContext } from '../../hooks/ModalContext';
 import { useContext } from 'react';
 
 const NftCard = ({ nft, index, bid }) => {
-	const { showModal, setShowModal, selectedNft, handleShowModal } =
+	const {handleShowModal } =
 		useContext(ModalContext);
 	const handleClick = () => {
-		console.log('clicked');
+		// console.log('clicked');
 	};
 
 	return (

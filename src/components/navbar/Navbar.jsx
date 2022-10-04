@@ -44,7 +44,7 @@ const Navbar = () => {
           </a>
         </li>
         <li className="navbar__item">
-          <a href="/collection" className="navbar__link">
+          <a href="/explore" className="navbar__link">
             Collection
           </a>
         </li>

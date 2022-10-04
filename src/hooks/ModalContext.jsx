@@ -10,8 +10,8 @@ export const ModalContextProvider = ({ children }) => {
 	const handleShowModal = (nft) => {
 		setSelectedNft(nft);
 		showModal ? setShowModal(false) : setShowModal(true);
-		console.log('clicked nft');
-    console.log(selectedNft)
+		// console.log('clicked nft');
+    // console.log(selectedNft)
 	};
 
   const closeModal = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import BuyModal from '../../components/buyModal/BuyModal'
 import NftCard from '../../components/nftCard/NftCard'
 // import { useAPI } from '../../../hooks/useAPI'
