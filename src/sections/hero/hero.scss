@@ -1,0 +1,72 @@
+@import "../../sass/_variables.scss";
+@import "../../sass/_mixin.scss";
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 10rem;
+  padding-top: 15rem;
+  background-blend-mode: overlay;
+  background:  linear-gradient(rgba(28, 23, 23, 0.276), rgba(8, 8, 5, 0.184)), linear-gradient(30deg, rgba(163,19,0,1) 15%, rgba(122,50,45,1) 32%, rgba(41,111,134,1) 73%, rgba(41,111,134,1) 89%), rgba(0, 0, 0, 0.042);
+  // background:  url(https://img.seadn.io/files/cd36c4e444975311c4b2d3c114a21c1d.png?fit=max&w=1000), linear-gradient(30deg, rgba(163,19,0,1) 15%, rgba(122,50,45,1) 32%, rgba(41,111,134,1) 73%, rgba(41,111,134,1) 89%), rgba(0, 0, 0, 0.042);
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    padding-top: 20rem;
+    padding-bottom: 10rem;
+  }
+
+  .hero__content {
+    flex: 0 0 50%;
+  }
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1.8
+  }
+
+  &__button {
+    a {
+      @include button;
+      display: flex;
+      align-items: center;
+      display: inline-block;
+    }
+  }
+
+  &__image {
+    width: 50rem;
+    height: 50rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid white;
+
+    @media only screen and (max-width: 768px) {
+      width: 30rem;
+      height: 30rem;
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

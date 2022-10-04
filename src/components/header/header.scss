@@ -1,0 +1,27 @@
+@import "../../sass/_variables.scss";
+@import "../../sass/_mixin.scss";
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 10rem;
+  padding-top: 15rem;
+  background-blend-mode: overlay;
+  background:  linear-gradient(rgba(28, 23, 23, 0.276), rgba(8, 8, 5, 0.184)), linear-gradient(30deg, rgba(163,19,0,1) 15%, rgba(122,50,45,1) 32%, rgba(41,111,134,1) 73%, rgba(41,111,134,1) 89%), rgba(0, 0, 0, 0.042);
+
+  .header__content {
+    font-size: 2.2rem;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 4rem 3rem;
+    padding-top: 15rem;
+  }
+  
+}

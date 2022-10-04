@@ -1,0 +1,105 @@
+@import "../../sass/_variables.scss";
+@import "../../sass/_mixin.scss";
+
+.footer {
+  background-color: $grey-bg;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  .heading {
+    color: $color-primary;
+    font-size: 1.4rem ;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  img{
+    width: 15rem;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15rem;
+    margin-top: 2rem;
+
+    i {
+      font-size: 2rem;
+      color: $color-primary;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // margin-top: 2rem;
+    // height: 10rem;
+
+    .list__item {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $color-primary;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      list-style-type: none;
+      margin-bottom: 1rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+      }
+      
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__newsletter {
+    &__input {
+      display: flex;
+    }
+    input {
+      width: 100%;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      outline: none;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      @include button;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      outline: none;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      margin-left: -5rem;
+    }
+  }
+}

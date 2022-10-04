@@ -1,0 +1,56 @@
+@import "../../sass/_variables.scss";
+@import "../../sass/_mixin.scss";
+
+.latest__item {
+  background-color: $grey-bg;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  .price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: $color-secondary
+  }
+  
+  &__info {
+    margin-top: 1rem;
+
+    .latest__item__info__name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $color-primary;
+    }
+
+    .latest__item__info__price {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $color-secondary;
+    }
+  }
+
+  &__info__button {
+    p {
+      @include button;
+      display: block;
+      margin-top: 2rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../sass/_variables.scss";
+@import "../../sass/_mixin.scss";
+
+.setup__item {
+  background-color: $grey-bg;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  .setup__item__title {
+    color: $color-secondary;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .setup__item__text {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .setup__item__icon {
+    color: $color-primary;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.setup__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// .swiper-container {
+//   width: 480px;
+// }
+
+// @media screen and (min-width: 640px) {
+//   .swiper-container {
+//     width: 640px;
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .swiper-container {
+//     width: 768px;
+//   }
+// }
