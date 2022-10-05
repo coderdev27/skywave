@@ -5,6 +5,7 @@ import Explore from '../../sections/explore/Explore'
 import Free from '../../sections/free/Free'
 import Hero from '../../sections/hero/Hero'
 import Latest from '../../sections/latest/Latest'
+import Pitch from '../../sections/pitch/Pitch'
 import Setup from '../../sections/setup/Setup'
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <Free />
       <Explore />
       <Setup />
+      <Pitch />
     </div>
   )
 }

@@ -29,7 +29,7 @@ const NftCard = ({ nft, index, bid }) => {
 							<p className="price">
 								<FaEthereum /> {nft.price}
 							</p>
-							<p>{nft.collection}</p>
+							<p className='collection'>{nft.collection}</p>
 						</div>
 					</div>
 

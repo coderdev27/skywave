@@ -71,3 +71,16 @@
     
   }
 }
+
+.buyModal__small {
+  text-align: center;
+  
+  p {
+    font-size: 1.6rem;
+    
+  }
+
+  button {
+    @include button;
+  }
+}

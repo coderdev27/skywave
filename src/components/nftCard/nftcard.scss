@@ -14,7 +14,7 @@
   }
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     margin: 1rem 0;
   }
@@ -24,6 +24,13 @@
     font-weight: 600;
     margin: 1rem 0;
     color: $color-secondary
+  }
+
+  .collection {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    // color: $color-secondary
   }
   
   &__info {
