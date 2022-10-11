@@ -4,6 +4,7 @@ import "./navbar.scss"
 import Logo from "../../assets/skyWaveLogo.png"
 import {BiWalletAlt} from "react-icons/bi"
 import {FaBars, FaTimes} from "react-icons/fa"
+import Web3 from 'web3'
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -18,6 +19,28 @@ const Navbar = () => {
   window.addEventListener('scroll', handleShow)
 
   const [showMenu, setShowMenu] = useState(false)
+  const [wallet, setWallet] = useState('Connect Wallet')
+  const [walletSvg, setWalletSvg] = useState('')
+
+  const connectWallet = async() =>{
+    
+    return new Promise(async (resolve,reject)=>{
+      let web3
+      if(window.ethereum){
+        web3 = new Web3(window.ethereum)
+      }else{
+        console.log('please download');
+      }
+
+      try {
+        await window.ethereum.request({method : 'eth_requestAccounts'})
+        resolve(web3)
+      } catch (error) {
+        reject(error)
+      }
+    })
+
+  }
 
   return (
     <nav className={show ? "navbar show" : "navbar"} >
@@ -50,14 +73,24 @@ const Navbar = () => {
         </li>
 
         <div className="navbar__button mobile_connect">
-          <a href="/"> <BiWalletAlt /> Connect Wallet</a>
+          <a onClick={async()=>{
+            const web3 = await connectWallet();
+            const walletAddress = await web3.eth.requestAccounts();
+            setWallet(walletAddress[0])
+            setWalletSvg('none')
+          }}> <BiWalletAlt display={walletSvg}/> {wallet}</a>
         </div>
       </ul>
 
       <div className="navbar__button" onClick={() => setShowMenu(true)}>
 
         <div className="connect-wallet-prompt">
-          <a href="/"> <BiWalletAlt /> Connect Wallet</a>
+          <a onClick={async()=>{
+            const web3 = await connectWallet();
+            const walletAddress = await web3.eth.requestAccounts();
+            setWallet(walletAddress[0])
+            setWalletSvg('none')
+          }}> <BiWalletAlt display={walletSvg}/> {wallet}</a>
         </div>
 
         <div className="navbar__hamburger">

@@ -1,7 +1,10 @@
 import React from 'react'
 import "./hero.scss"
+import Web3 from 'web3'
 
 const Hero = () => {
+
+
   return (
     <div>
       <div className="hero">
