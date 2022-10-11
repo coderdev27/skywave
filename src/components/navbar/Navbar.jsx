@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import "./navbar.scss"
 import Logo from "../../assets/skyWaveLogo.png"
 import {BiWalletAlt} from "react-icons/bi"
@@ -42,6 +42,18 @@ const Navbar = () => {
 
   }
 
+  const connection = async() => {
+    const web3 = await connectWallet();
+            const walletAddress = await web3.eth.requestAccounts();
+            setWallet(walletAddress[0])
+            setWalletSvg('none')
+  };
+
+  useEffect(() => {
+    connection()
+  }, []);
+
+
   return (
     <nav className={show ? "navbar show" : "navbar"} >
       <div className="navbar__logo">
@@ -74,10 +86,7 @@ const Navbar = () => {
 
         <div className="navbar__button mobile_connect">
           <a onClick={async()=>{
-            const web3 = await connectWallet();
-            const walletAddress = await web3.eth.requestAccounts();
-            setWallet(walletAddress[0])
-            setWalletSvg('none')
+           await connection()
           }}> <BiWalletAlt display={walletSvg}/> {wallet}</a>
         </div>
       </ul>
@@ -86,10 +95,7 @@ const Navbar = () => {
 
         <div className="connect-wallet-prompt">
           <a onClick={async()=>{
-            const web3 = await connectWallet();
-            const walletAddress = await web3.eth.requestAccounts();
-            setWallet(walletAddress[0])
-            setWalletSvg('none')
+            await connection()
           }}> <BiWalletAlt display={walletSvg}/> {wallet}</a>
         </div>
 
