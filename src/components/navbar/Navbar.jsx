@@ -43,10 +43,16 @@ const Navbar = () => {
   }
 
   const connection = async() => {
+    const isMobile = navigator.userAgentData.mobile;
+    if (isMobile) {
+      window.location = 'https://metamask.app.link/dapp/skywave-olive.vercel.app/';
+  }else{
+
     const web3 = await connectWallet();
             const walletAddress = await web3.eth.requestAccounts();
             setWallet(walletAddress[0])
             setWalletSvg('none')
+  }
   };
 
   useEffect(() => {
